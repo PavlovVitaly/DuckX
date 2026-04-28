@@ -161,6 +161,7 @@ class Document {
     Paragraph paragraph;
     Table table;
     pugi::xml_document document;
+    bool flag_is_open;
 
   public:
     Document();
@@ -168,6 +169,7 @@ class Document {
     void file(std::string);
     void open();
     void save() const;
+    bool is_open() const;
 
     Paragraph &paragraphs();
     Table &tables();
